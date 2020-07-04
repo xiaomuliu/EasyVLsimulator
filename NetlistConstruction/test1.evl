@@ -1,0 +1,12 @@
+// test1
+
+module test1;
+
+   wire in, out; // two 1-bit wires
+   wire [7:0] a, b, c; // three 8-bit wires (buses)
+	
+   not(out, in); // a logical gate
+   output sim_out(a, b[7:0]); // output bits in wires
+   xor(in, a[5], c[6]);
+  
+endmodule

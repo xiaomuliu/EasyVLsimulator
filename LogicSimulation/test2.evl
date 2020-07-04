@@ -1,0 +1,126 @@
+// some sommentc
+
+module tect2;
+
+
+  wire [15:0] a, in, c, m;
+  wire cet;
+
+  input test2_in(cet, in);
+  output test2_out(a, c, in, cet, m);
+  
+
+  dff(a[0], m[0]);
+  dff(a[1], m[1]);
+  dff(a[2], m[2]);
+  dff(a[3], m[3]);
+  dff(a[4], m[4]);
+  dff(a[5], m[5]);
+  dff(a[6], m[6]);
+  dff(a[7], m[7]);
+  dff(a[8], m[8]);
+  dff(a[9], m[9]);
+  dff(a[10], m[10]);
+  dff(a[11], m[11]);
+  dff(a[12], m[12]);
+  dff(a[13], m[13]);
+  dff(a[14], m[14]);
+  dff(a[15], m[15]);
+       
+  
+  wire [16:0] ci;
+  
+  one(ci[0]);
+  
+  xor(c[0], a[0], ci[0]);
+  xor(c[1], a[1], ci[1]);
+  xor(c[2], a[2], ci[2]);
+  xor(c[3], a[3], ci[3]);
+  xor(c[4], a[4], ci[4]);
+  xor(c[5], a[5], ci[5]);
+  xor(c[6], a[6], ci[6]);
+  xor(c[7], a[7], ci[7]);
+  xor(c[8], a[8], ci[8]);
+  xor(c[9], a[9], ci[9]);
+  xor(c[10], a[10], ci[10]);
+  xor(c[11], a[11], ci[11]);
+  xor(c[12], a[12], ci[12]);
+  xor(c[13], a[13], ci[13]);
+  xor(c[14], a[14], ci[14]);
+  xor(c[15], a[15], ci[15]);
+
+  and(ci[1], a[0], ci[0]);
+  and(ci[2], a[1], ci[1]);
+  and(ci[3], a[2], ci[2]);
+  and(ci[4], a[3], ci[3]);
+  and(ci[5], a[4], ci[4]);
+  and(ci[6], a[5], ci[5]);
+  and(ci[7], a[6], ci[6]);
+  and(ci[8], a[7], ci[7]);
+  and(ci[9], a[8], ci[8]);
+  and(ci[10], a[9], ci[9]);
+  and(ci[11], a[10], ci[10]);
+  and(ci[12], a[11], ci[11]);
+  and(ci[13], a[12], ci[12]);
+  and(ci[14], a[13], ci[13]);
+  and(ci[15], a[14], ci[14]);
+  and(ci[16], a[15], ci[15]);
+    
+  
+  wire ncet;
+  wire [15:0] nca, cin;
+  
+  not(ncet, cet);
+  
+  and(nca[0], ncet, c[0]);
+  and(nca[1], ncet, c[1]);
+  and(nca[2], ncet, c[2]);
+  and(nca[3], ncet, c[3]);
+  and(nca[4], ncet, c[4]);
+  and(nca[5], ncet, c[5]);
+  and(nca[6], ncet, c[6]);
+  and(nca[7], ncet, c[7]);
+  and(nca[8], ncet, c[8]);
+  and(nca[9], ncet, c[9]);
+  and(nca[10], ncet, c[10]);
+  and(nca[11], ncet, c[11]);
+  and(nca[12], ncet, c[12]);
+  and(nca[13], ncet, c[13]);
+  and(nca[14], ncet, c[14]);
+  and(nca[15], ncet, c[15]);
+    
+  and(cin[0], cet, in[0]);
+  and(cin[1], cet, in[1]);
+  and(cin[2], cet, in[2]);
+  and(cin[3], cet, in[3]);
+  and(cin[4], cet, in[4]);
+  and(cin[5], cet, in[5]);
+  and(cin[6], cet, in[6]);
+  and(cin[7], cet, in[7]);
+  and(cin[8], cet, in[8]);
+  and(cin[9], cet, in[9]);
+  and(cin[10], cet, in[10]);
+  and(cin[11], cet, in[11]);
+  and(cin[12], cet, in[12]);
+  and(cin[13], cet, in[13]);
+  and(cin[14], cet, in[14]);
+  and(cin[15], cet, in[15]);
+    
+  or(m[0], nca[0], cin[0]);
+  or(m[1], nca[1], cin[1]);
+  or(m[2], nca[2], cin[2]);
+  or(m[3], nca[3], cin[3]);
+  or(m[4], nca[4], cin[4]);
+  or(m[5], nca[5], cin[5]);
+  or(m[6], nca[6], cin[6]);
+  or(m[7], nca[7], cin[7]);
+  or(m[8], nca[8], cin[8]);
+  or(m[9], nca[9], cin[9]);
+  or(m[10], nca[10], cin[10]);
+  or(m[11], nca[11], cin[11]);
+  or(m[12], nca[12], cin[12]);
+  or(m[13], nca[13], cin[13]);
+  or(m[14], nca[14], cin[14]);
+  or(m[15], nca[15], cin[15]);
+    
+endmodule // counter

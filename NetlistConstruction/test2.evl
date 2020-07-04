@@ -1,0 +1,17 @@
+// test2
+
+module test2;
+
+  wire [3:0] a, s;
+  wire in, out;
+
+  // some comments
+  input sim_in(out, in);
+  output sim_out(a, s, in, out);
+  
+  dff(a[0], s[0]);
+  dff(a[1], s[1]);
+  dff(a[2], s[2]);
+  dff(a[3], s[3]);
+    
+endmodule

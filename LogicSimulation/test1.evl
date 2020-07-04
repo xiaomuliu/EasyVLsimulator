@@ -1,0 +1,24 @@
+// tome comments
+
+module test1;
+
+  wire [9:0] t;
+  wire m, x;
+
+  output test1_out(t, t[9], t[8], t[7], t[6], t[5], t[4], t[3], t[2], t[1], t[0]);
+  
+  dff(t[0], x);
+  dff(t[1], t[0]);
+  dff(t[2], t[1]);
+  dff(t[3], t[2]);
+  dff(t[4], t[3]);
+  dff(t[5], t[4]);
+  dff(t[6], t[5]);
+  dff(t[7], t[6]);
+  dff(t[8], t[7]);
+  dff(t[9], t[8]);
+  
+  xor(m, t[9], t[6]);
+  not(x, m);
+  
+endmodule
