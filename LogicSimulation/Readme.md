@@ -69,18 +69,18 @@ For output gate. on_cycle_end() will compute its inputs which also will trigger 
 Recursive Logic Evaluation
 Now let's focus on recursive logic evaluation
 The algorithm is as following:
-	-Before the evaluation starts, set the logic value of all nets to ?.
-	-For each of the flip-flops/output gates, ask the input nets for their values.
-	-If a net is asked for its logic value,
-		-If the value is computed (not a ?), then return it.
-		-Otherwise (the value is ?), the net should ask its driver gate to
+* Before the evaluation starts, set the logic value of all nets to ?.
+* For each of the flip-flops/output gates, ask the input nets for their values.
+* If a net is asked for its logic value,
+	* If the value is computed (not a ?), then return it.
+	* Otherwise (the value is ?), the net should ask its driver gate to
 		compute the value. The value should then be stored (replacing
 		?) and returned.
-	-If a gate is asked to compute a logic value,
-		-If it is a flip-flop, then it provide the current state bit.
-		-If it is an input gate, then it provide the value from the file.
-		-If it is an one/zero gate, then it provide 1/0.
-		-Otherwise, it should first ask all of its input nets to provide
+	* If a gate is asked to compute a logic value,
+		* If it is a flip-flop, then it provide the current state bit.
+		* If it is an input gate, then it provide the value from the file.
+		* If it is an one/zero gate, then it provide 1/0.
+		* Otherwise, it should first ask all of its input nets to provide
 		their values and then perform predefined computations.
 
 For net, we can design a pair std::pair <std::string, bool> logic_value to represent its status(known' Y' and unknown'?') and logic value.

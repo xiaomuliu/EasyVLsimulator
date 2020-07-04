@@ -1,4 +1,4 @@
-** Netlist Construction
+## Netlist Construction
 By analyzing the semantics of the statements, we have extracted the descriptions of the wires, the components, and their interconnections in a circuit. The objectives is to start designing a data structure called netlist to represent the circuit for simulation and to implement a program to actually construct the netlist from the descriptions of the circuit.
 
 A netlist is consisting of signal nets (or simply nets) that pass signals around and components that perform computations. The reason to have signal nets instead of wires in a netlist is because the former are much easier to handle in simulation when buses are presented. In the netlist, each wire of width k is broken into k signal nets where each net passes exactly one bit of signal. For example, a wire representing a 8-bit bus converts to 8 signal nets in the netlist. 

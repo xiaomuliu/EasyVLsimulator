@@ -13,11 +13,9 @@ is to determine the current inputs and the current state and to compute the curr
 outputs and the next state repeatedly.
 
 Given that hardware designers may use our simulator to simulate many different
-synchronous circuits, we should allow them to specify the circuits in a way that is con-
-venient and familiar to them. While there are many establish tools including schematic
+synchronous circuits, we should allow them to specify the circuits in a way that is convenient and familiar to them. While there are many establish tools including schematic
 drawing programs and hardware description languages, it is extremely diffcult for us to
 build one because of our limited knowledge on both digital logic simulation and C++. Therefore, we decide to design our own language called EasyVL for the designers to
 specify the circuits in a textual form by simplifying one of the most popular hardware
 description languages called Verilog and adding a few extensions. Though EasyVL is
-relatively simple so we can build a simulator in one semester, it is powerful enough so
-we can simulate any synchronous circuit once it is specified in EasyVL.
+relatively simple, it is powerful enough so we can simulate any synchronous circuit once it is specified in EasyVL.
